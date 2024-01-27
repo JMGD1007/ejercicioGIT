@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+
+<body>
+    <script>
+        // Crear una variable para almacenar el número de elementos
+        let numeroDeElementos = 4;
+
+        // Crear una función para generar la serie Fibonacci
+        function generarSerieFibonacci(numeroDeElementos) {
+            // Crear un array para almacenar los elementos de la serie
+            let serieFibonacci = [0, 1];
+
+            // Generar la serie Fibonacci
+            for (let i = 2; i < numeroDeElementos; i++) {
+                let siguienteElemento = serieFibonacci[i - 1] + serieFibonacci[i - 2];
+
+                // Agregar el siguiente elemento al array
+                serieFibonacci.push(siguienteElemento);
+            }
+
+            return serieFibonacci;
+        }
+
+        let serie = generarSerieFibonacci(numeroDeElementos);
+
+        console.log(serie);
+    </script>
+</body>
+</html>

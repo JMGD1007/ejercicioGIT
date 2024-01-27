@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+
+<body>
+
+    <script>
+        // Crear una variable llamada inicio con los valores de prueba
+        const inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+
+        // Crear una función para ordenar un array de números de mayor a menor
+        function ordenarNumeros(arr) {
+            const numeros = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (typeof arr[i] === "number") {
+                    numeros.push(arr[i]);
+                }
+            }
+
+            for (let i = 0; i < numeros.length; i++) {
+                for (let j = 0; j < numeros.length - 1 - i; j++) {
+                    if (numeros[j] < numeros[j + 1]) {
+                        const temp = numeros[j];
+                        numeros[j] = numeros[j + 1];
+                        numeros[j + 1] = temp;
+                    }
+                }
+            }
+
+            return numeros;
+        }
+
+        const resultado = ordenarNumeros(inicio);
+
+        console.log("Arreglo ordenado de mayor a menor:", resultado);
+    </script>
+
+</body>
+</html>
